@@ -1,6 +1,6 @@
-package labsWeek3;
+package week03;
 
-public class Week3Array {
+public class Week03Array {
 
 	public static void main(String[] args) {
 		
