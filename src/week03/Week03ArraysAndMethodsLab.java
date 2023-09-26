@@ -176,9 +176,6 @@ public class Week03ArraysAndMethodsLab {
 		int[] eachLength = new int[strings.length];
 		for (int i =0; i < strings.length; i++) {
 			eachLength[i] = strings[i].length();
-//		for (String str : strings) {
-//			int l = str.length();
-//			eachLength[l] = strings[l].length();
 			
 		}
 		return eachLength;
@@ -192,7 +189,7 @@ public class Week03ArraysAndMethodsLab {
 			if (string.length() % 2 == 0) {
 				even += string.length();
 			} else {
-				odd += string.length();
+				odd += string.length();			
 			}
 		}
 
@@ -210,4 +207,254 @@ public class Week03ArraysAndMethodsLab {
 	}
 	
 
+	
+//	P1
+	static int returnSum(int num1, int num2, int num3) {
+		return num1 + num2 + num3;
+    }
+	
+	static String repeatWord(String userWord, int numTimes) {
+		String newString = "";
+		for (int i = 0; i < numTimes; i++) {
+			newString += userWord;
+		}
+		return newString;
+	}
+	
+	static void fizzBuzz(int num1) {
+		if (num1 % 3 == 0 && num1 % 5 == 0) {
+			System.out.println("FizzBuzz");
+		} else if (num1 % 3 == 0) {
+			System.out.println("Fizz");
+		} else if (num1 % 5 == 0) {
+			System.out.println("Buzz");
+		} else {
+			System.out.println("Hello world!");
+		}
+	
+	}
+	
+	static double orderTotal(double product1, double product2, double product3, double taxRate) {
+	    
+	    // WRITE YOUR CODE HERE
+		double subTotal = product1 + product2 + product3;
+		double taxAmount = subTotal * taxRate;
+		return subTotal + taxAmount;
+	}
+//	P2
+	static int[] createArray(int a, int b, int c, int d, int e) {
+		// WRITE YOUR CODE HERE
+		int[] array = {a, b, c, d, e};
+		return array;
+	}
+	
+	static int sumOfDigits(int digits) {
+	    
+	    // WRITE YOUR CODE HERE
+		int result = 0;
+		
+		while(digits > 0) {
+			result += digits % 10;
+			digits /= 10;
+		}
+	  
+	    return result;
+	
+	}
+	
+	static boolean passwordChecker(String password) {
+		
+		// WRITE YOUR CODE HERE
+		if (password.length() >= 8 && 
+		    (password.contains("!") ||
+		     password.contains("$") ||
+		     password.contains("%") || 
+		     password.contains("&"))) {
+		         return true;
+		     }
+		return false;
+	}
+	static int avgNameLength(String[] names) {
+	
+		// WRITE YOUR CODE HERE
+		int sum = 0;
+		for (String n : names) {
+			sum += n.length();
+		}
+		return sum / names.length; 
+	}
+
+	static int rectanglePerimeter(int length, int width){
+		return length + length + width + width;
+	}
+	
+//	arrays P1
+	static void notMain(String[] args) {
+	    
+        int[] numbers = {2, 4, 6, 8, 10};
+        int sum = 0;
+        int sum2 = 0;
+    /***** DO NOT CHANGE THE CODE ABOVE THIS LINE *****/
+
+        // WRITE YOUR CODE HERE 
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        // WRITE YOUR CODE HERE 
+        for (int number : numbers){
+            sum2 += number;
+        }
+
+        System.out.println(sum + " or " + sum2);
+	}
+	
+	static void addX(int[] arr, int x) {
+		System.out.println("**Original**"); // Keep this print statement
+    /***** DO NOT CHANGE THE CODE ABOVE THIS LINE ******/
+
+        // WRITE YOUR CODE HERE  FOR PART 1
+		for ( int i = 0; i < arr.length; i++ ) {
+		    System.out.println(arr[i]);
+		    arr[i] += x;
+		}
+
+    /***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/ 	
+		System.out.println("**New Array**"); // Keep this print statement
+    /***** DO NOT CHANGE THE CODE ABOVE THIS LINE *****/
+
+        // WRITE YOUR CODE HERE FOR PART 2 
+
+		for ( int j = 0; j < arr.length; j++ ) {
+		    System.out.println(arr[j]);
+		}
+
+    /***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/ 
+	}
+	
+	static void changeTwo(int a, int b, int[] arr) {
+		/****** DO NOT CHANGE THE CODE ABOVE THIS LINE ******/
+
+		        // WRITE YOUR CODE HERE
+
+		        arr[0] = a;
+		        arr[arr.length - 1] = b;
+		        
+		        for ( int x : arr ) {
+		            System.out.println(x);
+		        }
+	}
+	
+	static void charArray(String userWord) {
+	    /***** DO NOT CHANGE THE CODE ABOVE THIS LINE *****/
+
+	        // WRITE YOUR CODE HERE
+			char[] arr = new char[userWord.length()];
+			for ( int i = 0; i < userWord.length(); i++ ) {
+			    arr[i] = userWord.charAt(i);
+			}
+			
+			for ( int j = 0; j < arr.length; j++ ) {
+			    System.out.println(arr[j]);
+			}
+	}
+	
+	static char[] wordToArray(String userWord) {
+	    /***** DO NOT CHANGE THE CODE ABOVE THIS LINE *****/
+
+	        // WRITE YOUR CODE HERE
+		    char[] charArray = new char[userWord.length()];
+			for (int i = 0; i < userWord.length(); i++) {
+			    charArray[i] = userWord.charAt(i);
+			}
+			
+			return charArray;
+	}
+	
+	
+//	P2 
+	// 11 WRITE YOUR CODE HERE
+//		int[] numArray = new int[num];
+//		for ( int i = 0; i < num; i++ ) {
+//			   numArray[i] = i;
+//		}
+//		return numArray;
+
+
+	// 13 WRITE YOUR CODE HERE
+//		int[] arrayInt = {num1, num2, num3, num4, num5, num6};
+//		
+//		return arrayInt[arrayInt.length - 1];
+//		}
+		
+	// 15 WRITE YOUR CODE HERE
+//		String[] newArr = { word1, word2, word3 };
+//		String[] combinedArr = new String[arr.length + newArr.length];
+//		int counter = 0;
+//				
+//		for ( String str : arr ) {
+//			combinedArr[counter] = str;
+//			counter++;
+//			}
+//				
+//		for ( String str2 : newArr ) {
+//			combinedArr[counter] = str2;
+//			counter++;
+//			}
+//				
+//		for ( int i = 0; i < combinedArr.length; i++ ) {
+//			System.out.println(combinedArr[i]);
+//				    
+//			}
+		// 17 WRITE YOUR CODE HERE
+				
+//			int j = arr.length;
+//			int[] reverseArr = new int[j];
+//				
+//			for ( int i = 0; i < arr.length; i++ ) {
+//				reverseArr[j-1] = arr[i];
+//				j--;
+//			}
+//				
+//			for ( int x : arr ) {
+//				System.out.println(x);
+//			}
+//				
+//			for ( int y : reverseArr ) {
+//				System.out.println(y);
+//			}
+//			
+			
+		//declares a 2D integer Array with 3 rows and 4 columns
+//		int[][] matrix1 = new int[3][4]; 
+
+
+		//declares and initializes a 2D integer Array with 3 rows and 4 columns
+//		int[][] matrix2 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}; 
+		
+		// Check for error -- invalid parameters with an if/else
+//			if (a <= 2 || b <= 2) {
+//			    System.out.println("Both numbers need to be greater than 2.");
+//			} else {
+		    // If both parameters are > 2
+		    // Declare a multidimensional array something like this:
+		    //          int[][] arr = new int[param1][param2];
+			    
+//		    int[][] arr = new int[a][b];
+				
+			    // Create two loops to populate your new multidimensional array
+			    // Note:  you will need a new index in each for-loop. 
+			    //          one index will be used for the first for-loop's index (0 to param1 - 1)
+			    //          the second index will be used for the second for-loop's index (0 to param2 - 1)		
+//		    for ( int i = 0; i < a; i++ ) {
+//		        for ( int j = 0; j < b; j++ ) {
+//			            arr[i][j] = j;
+//			        }
+//			    }
+				
+		    // After you have populated your multidimensional array, 
+		    // Print out the value of arr[firstPosition][lastPosition]
+				    
+//			    System.out.println(arr[0][arr[0].length - 1]);
+			
 }
+
